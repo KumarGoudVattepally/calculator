@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <center><form id="form" onsubmit="evaluation(event)">
+        <input type="text" value="" style="height: 40px; width: 250px;" id="ip1"><br><br>
+        <input type="button" value="7"style="height: 50px;width: 50px;background: red" onclick="input(event)">
+        <input type="button" value="8"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="9"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="/"style="height: 50px;width: 50px;background: blue"onclick="input(event)"><br>
+        <input type="button" value="4"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="5"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="6"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="-"style="height: 50px;width: 50px;background: green"onclick="input(event)"><br>
+        <input type="button" value="1"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="2"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="3"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="*"style="height: 50px;width: 50px;background: yellow"onclick="input(event)"><br>
+        <input type="button" value="."style="height: 50px;width: 50px;background: orange"onclick="input(event)">
+        <input type="button" value="0"style="height: 50px;width: 50px;background: red"onclick="input(event)">
+        <input type="button" value="+"style="height: 50px;width: 50px;background: violet"onclick="input(event)">
+        <input type="submit" value="="style="height: 50px;width: 50px; background: #000;color:white; pa">
+        
+    </form></center>
+    <script>
+        let form=document.getElementById("form")
+        let text=document.getElementById("ip1")
+
+        const  input=(event)=>{
+            text.value+=event.target.value
+        }
+        const evaluation = (event) => {
+        event.preventDefault();
+        let res = eval(text.value);
+        text.value = res;
+      };
+    </script>
+    
+</body>
+</html>
